@@ -28,4 +28,6 @@ func main() {
 	maxWatchedTime := slidingwindow.MaxWatchTime(watchHistory, maxTime)
 
 	fmt.Println(maxWatchedTime)
+
+	fmt.Println(slidingwindow.MaxWatchTime(watchHistory, maxTime))
 }

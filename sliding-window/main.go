@@ -18,3 +18,22 @@ func MaxWatchTime(arr []int, size int) int {
 	}
 	return maxTime
 }
+
+func GetMaxSales(sales []int, days int) int {
+	current := 0
+
+	for i := range days {
+		current += sales[i]
+	}
+
+	maxSales := current
+
+	for i := 1; i < len(sales)-days; i++ {
+		current = current - sales[i-1] + sales[i+days-1]
+
+		if current > maxSales {
+			maxSales = current
+		}
+	}
+	return maxSales
+}
