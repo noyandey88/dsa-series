@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	binarysearch "github.com/noyandey88/dsa-series/binary-search"
 	slidingwindow "github.com/noyandey88/dsa-series/sliding-window"
 	twopointers "github.com/noyandey88/dsa-series/two-pointers"
 )
@@ -30,4 +31,11 @@ func main() {
 	fmt.Println(maxWatchedTime)
 
 	fmt.Println(slidingwindow.MaxWatchTime(watchHistory, maxTime))
+
+	// binary search
+
+	searchHistory := []int{1, 2, 3, 6, 11, 12, 14, 18, 20, 22, 25}
+	position := 18
+
+	fmt.Println(binarysearch.BinarySearch(searchHistory, position))
 }
